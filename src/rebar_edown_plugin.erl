@@ -5,6 +5,8 @@
          do/1,
          format_error/1]).
 
+-include_lib("rebar3/include/rebar.hrl").
+
 -define(PROVIDER, edown).
 -define(DEPS, [app_discovery]).
 
@@ -33,7 +35,7 @@ do(State) ->
     EDocOpts = [{doclet, edown_doclet} | DefaultEDocOpts],
     lists:foreach(fun(AppInfo) ->
                           AppName = ec_cnv:to_list(rebar_app_info:name(AppInfo)),
-                          io_lib:format("Running edown for ~s", [AppName]),
+                          ?INFO("Running edown for ~s", [AppName]),
                           AppDir = rebar_app_info:dir(AppInfo),
                           ok = edoc:application(list_to_atom(AppName), AppDir, EDocOpts)
                   end, ProjectApps),

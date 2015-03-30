@@ -1,7 +1,7 @@
 rebar_edown_plugin
 ==================
 
-A rebar3 plugin for `edown`.
+A rebar3 plugin for [edown](https://github.com/esl/edown).
 
 Build
 -----
@@ -11,15 +11,15 @@ Build
 Use
 ---
 
-Add the plugin to your rebar config:
+Add the plugin to your `rebar.config`:
 
     {plugins, [
         {rebar_edown_plugin, ".*", {git, "git@host:user/rebar_edown_plugin.git", {tag, "0.1.0"}}}
     ]}.
 
-Then just call your plugin directly in an existing application:
+Then just call the plugin directly in an existing application:
 
     $ rebar3 edown
     ===> Fetching rebar_edown_plugin
     ===> Compiling rebar_edown_plugin
-    Running edoc for myapp
+    Running edown for myapp
