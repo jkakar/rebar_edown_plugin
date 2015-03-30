@@ -14,8 +14,8 @@ Add the plugin to your `rebar.config`:
 
 ```erlang
 {plugins, [
-    {rebar_edown_plugin, ".*",
-     {git, "git@host:user/rebar_edown_plugin.git", {tag, "0.1.0"}}}
+  {rebar_edown_plugin,
+   {git, "git://github.com/jkakar/rebar_edown_plugin.git", {tag, "0.1.0"}}}
 ]}.
 ```
 
