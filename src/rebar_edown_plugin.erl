@@ -33,7 +33,7 @@ do(State) ->
     EDocOpts = [{doclet, edown_doclet} | DefaultEDocOpts],
     lists:foreach(fun(AppInfo) ->
                           AppName = ec_cnv:to_list(rebar_app_info:name(AppInfo)),
-                          rebar_log:log(info, "Running edown for ~s", [AppName])),
+                          rebar_log:log(info, "Running edown for ~s", [AppName]),
                           AppDir = rebar_app_info:dir(AppInfo),
                           ok = edoc:application(list_to_atom(AppName), AppDir, EDocOpts)
                   end, ProjectApps),
