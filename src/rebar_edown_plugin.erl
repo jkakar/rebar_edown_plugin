@@ -5,8 +5,6 @@
          do/1,
          format_error/1]).
 
--include_lib("rebar/include/rebar.hrl").
-
 -define(PROVIDER, edown).
 -define(DEPS, [app_discovery]).
 
