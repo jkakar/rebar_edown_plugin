@@ -1,0 +1,10 @@
+{application, rebar_edown_plugin,
+ [{description, "A rebar3 plugin for edown."}
+ ,{vsn, "0.1.0"}
+ ,{registered, []}
+ ,{applications,
+    [kernel
+    ,stdlib]}
+ ,{env,[]}
+ ,{modules, []}
+ ]}.
