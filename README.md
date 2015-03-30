@@ -1,17 +1,14 @@
-rebar_edown_plugin
-==================
+# rebar_edown_plugin
 
 A rebar3 plugin for [edown](https://github.com/esl/edown).
 
-Build
------
+## Build
 
 ```
 $ rebar3 compile
 ```
 
-Use
----
+## Use
 
 Add the plugin to your `rebar.config`:
 
@@ -22,7 +19,7 @@ Add the plugin to your `rebar.config`:
 ]}.
 ```
 
-Then just call the plugin directly in an existing application:
+Then run the plugin:
 
 ```
 $ rebar3 edown
