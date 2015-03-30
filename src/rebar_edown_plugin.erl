@@ -6,7 +6,7 @@
          format_error/1]).
 
 -define(PROVIDER, edown).
--define(DEPS, [app_discovery]).
+-define(DEPS, [edoc]).
 
 %% ===================================================================
 %% Public API
