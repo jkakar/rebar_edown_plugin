@@ -34,7 +34,8 @@ do(State) ->
     lists:foreach(fun(AppInfo) ->
                           AppName = ec_cnv:to_list(rebar_app_info:name(AppInfo)),
                           rebar_log:log(info, "Running edown for ~s", [AppName]),
-                          ok = edoc:application(list_to_atom(AppName), EDocOpts)
+                          AppDir = rebar_app_info:dir(AppInfo),
+                          ok = edoc:application(list_to_atom(AppName), AppDir, EDocOpts)
                   end, ProjectApps),
     {ok, State}.
 
